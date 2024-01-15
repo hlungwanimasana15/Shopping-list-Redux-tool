@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../firestoreRedux/addSlice';
 
@@ -44,7 +44,11 @@ const Add = () => {
         value={quantity}
         onChangeText={(text) => setQuantity(text)}
       />
-      <Button title="Add" onPress={handleSubmit} />
+        <Button
+      title="Add items "
+      onPress={handleSubmit}
+     
+    />
     </View>
   );
 };
@@ -52,6 +56,7 @@ const Add = () => {
 const styles = StyleSheet.create({
   container: {
     margin: 20,
+    paddingTop:10
   },
   input: {
     height: 40,
@@ -59,6 +64,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
     padding: 10,
+    borderRadius:5
   },
 });
 
